@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Droid+Serif);
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*:after,
+*:before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+header {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+table {
+    margin: 0 auto;
+    display: block;
+    width:300px;
+    height: 380px;
+    overflow-y: scroll;
+    overflow: hidden;
+    border: 0;
+    padding-top:20px;
+}
+td {
+    width: 250px;
+    padding-right: 10px;
+    font-family: 'Droid Serif', serif;
+    font-size: 2em;
+}
+
+label{
+    display: inline-block;
+}
+tr {
+    border-bottom: 1px dashed black;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: content-box;
+    width: 25px;
+    height: 25px;
+    transition: all .3s linear;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-right: 20px;
+}
+input[type="checkbox"]:checked{
+    background-color: #2ECC71;
+    border: 1px solid #2ECC71;
+}
+input[type="checkbox"]:focus{
+    outline: 0 none;
+    box-shadow: none;
+}
+
+td {
+    /*display: block;*/
+}
+
+
+.canvas-overlay {
+    position:absolute;
+}
+
+#typeItem, #addItem {
+    display: inline-block;
+}
+
+
+.paint {
+    position:relative;
+    top:0;
+    left:0;
+    z-index:-5;
+}
+
+div.wrapper {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 0;
+    width: 320px;
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    background:transparent;
+    padding: 0 20px 20px 20px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+    font-family: 'Droid Serif', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #2ECC71;
+    border-color: #2ECC71;
+}
+
+input[type="text"] {
+    width: 250px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-right: 5px;
+}
+
+button {
+    padding-top: 100px;
+}
+
+.footer-wrapper {
+    padding: 20px;
+    margin: 0 auto;
+    width: 320px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

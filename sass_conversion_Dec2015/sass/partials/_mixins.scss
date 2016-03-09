@@ -1,0 +1,116 @@
+@mixin marginpadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin equalSpaced( $num_of_cols, $spacing, $width:100%) {
+    width: ( $width - ( $spacing * ($num_of_cols - 1))) / $num_of_cols;
+    margin-left: $spacing;
+    float: left;
+    // Remove Spacing from First Child
+    &:first-child {
+        margin-left: 0;
+        border-left: 0;
+    }
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    box-sizing: $box-model;
+}
+
+@mixin colors($bg, $text) {
+    background-color: $bg;
+    color: $text;
+}
+
+@mixin automargin() {
+    margin: 0 auto;
+}
+
+@mixin commonpadding() {
+    padding: 2rem 0;
+}
+
+@mixin fslheight($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin media($size1, $size2) {
+    @media screen and (min-width: $size1) and (max-width: $size2) {
+        @content;
+    }
+}
+
+@mixin footcolumn($unicode, $direction) {
+    unicode-bidi: $unicode;
+    direction: $direction;
+}
+
+@mixin nav($position, $width, $padding) {
+    position: $position;
+    width: $width;
+    padding: $padding;
+}
+
+;
+@mixin icon($color, $align) {
+    color: $color;
+    vertical-align: $align;
+}
+
+@mixin mediaSingle($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin fontpadding($size, $padding1) {
+    font-size: $size;
+    padding: $padding1;
+}
+
+@mixin wdautomargin($width) {
+    width: $width;
+    margin: 0 auto;
+}
+
+;
+@mixin bcp($bgcolor, $textcolor, $padding1, $padding2) {
+    background: $color;
+    color: $textColor;
+    padding: $padding1 $padding2;
+}
+
+@mixin content($fontsize, $textcolor) {
+    font-size: $fontsize;
+    color: $textcolor;
+}
+
+@mixin lineHeight($line-height) {
+    line-height: $line-height;
+}
+
+@mixin wdfloat($width, $display, $float) {
+    width: $width;
+    display: $display;
+    float: $float;
+}
+
+@mixin media($size1, $size2) {
+    @media all and (min-width: $size1) and (max-width: $size2) {
+        @content;
+    }
+}

@@ -1,0 +1,32 @@
+// colors
+$light-blue:#C7F7FF;
+$med-blue:#89C0C9;
+$dark-blue:#3a5E63;
+$light-brown:#C9A689;
+$dark-brown:#7C593C;
+$light-grey:#d4d4d4;
+$dark-grey:#222;
+$white:#fff;
+$grey: #d4d4d4;
+//
+$size1:701px;
+$size2:901px;
+$size3:1401px;
+// then we set functional variables: prefix 'd' means 'default'.
+$dtext_color: $dark-grey;
+$nav_font_size: 1.414rem;
+$nav_hover_color: $dark-brown;
+$wk: -webkit-;
+$dfont-family: 'Josefin Sans',
+‘Trebuchet MS’,
+Helvetica,
+sans-serif;
+
+/* default for whole page: html{} */
+
+$default_width: 400px;
+$hfont-family: Cardo,
+‘Palatino Linotype’,
+‘Book Antiqua’,
+Palatino,
+serif; // h means heading

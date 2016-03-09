@@ -1,0 +1,280 @@
+@import "partials/variables";
+@import "partials/mixins";
+@include media(701px, 900px) {
+    header {
+        width: 700px;
+        @include automargin;
+        min-height: 8rem;
+        h1 {
+            width: 100%;
+            span {
+                @include wdfloat(auto, inline, none);
+                letter-spacing: 0.25rem;
+                text-align: left;
+            }
+            i.fa-lg {
+                @include wdfloat(inherit, inline, none);
+                @include icon($dark-brown, baseline);
+                @include fslheight(4rem, 4rem*1.6);
+            }
+        }
+    }
+    nav {
+        @include nav(static, 100%, 0);
+        li {
+            @include wdfloat(20%, inherit, left);
+        }
+        a {
+            @include fslheight(1rem, 1rem*2);
+            border-top: none;
+            min-height: 6rem;
+            padding: 1rem;
+            border-right: 1px solid #d4d4d4;
+        }
+    }
+    section {
+        &.focal,
+        &.content1,
+        &.content2 {
+            @include wdautomargin(700px);
+        }
+    }
+    footer {
+        @include wdautomargin(700px);
+    }
+    .col-4 {
+        @include equalSpaced(2, 0);
+    }
+    section.content2 {
+        h4,
+        li {
+            font-size: 1.414rem;
+        }
+    }
+    footer {
+        .fa-circle {
+            color: $med-blue;
+        }
+        .col-2:last-child {
+            @include footcolumn(bidi-override, rtl);
+        }
+        h4 {
+            &[lang=ar] {
+                display: block;
+            }
+            &[lang=de],
+            &[lang=en],
+            &[lang=ru] {
+                display: none;
+            }
+        }
+    }
+}
+
+@include media(901px, 1400px) {
+    header {
+        @include wdautomargin(900px);
+        h1 {
+            width: 100%;
+            color: $dark-blue;
+            span {
+                display: inline;
+                float: none;
+                letter-spacing: 0.25rem;
+                @include fslheight(3.998rem, 3.998rem*1.6);
+                text-align: left;
+            }
+            i.fa-lg {
+                @include wdfloat(auto, inline, none);
+                @include icon($dark-blue, baseline);
+                @include fslheight(4rem, 4rem*1.6);
+            }
+        }
+    }
+    nav {
+        @include nav(static, 100%, 0);
+        clear: both;
+        li {
+            width: 20%;
+            float: left;
+            &:first-child a {
+                border: none;
+            }
+        }
+        a {
+            @include fslheight(1rem, 2rem);
+            @include marginpadding(0 1rem, 1rem 0);
+            @include marginpadding(1rem 0, 0 1rem);
+            border: none;
+            min-height: 2rem;
+            border: none;
+            border-left: 1px solid $grey;
+        }
+    }
+    section {
+        &.focal,
+        &.content1,
+        &.content2 {
+            width: 900px;
+            margin: 0 auto;
+        }
+        &.focal h2,
+        &.focal p {
+            width: 600px;
+            @include automargin;
+        }
+    }
+    footer {
+        width: 900px;
+        margin: 0 auto;
+    }
+    .col-3 {
+        @include equalSpaced(3, 3);
+        margin-left: 3%;
+    }
+    .col-4 {
+        @include equalSpaced(4, 3);
+        margin-left: 3%;
+    }
+    section.content1 {
+        h3 {
+            font-size: 1.999rem;
+            font-weight: 100;
+            .fa-2x {
+                font-size: 1.999rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+    section.content2 {
+        h4,
+        li {
+            font-size: 1.414rem;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+    footer {
+        .fa-circle {
+            color: $light-brown;
+        }
+        .col-2:last-child {
+            unicode-bidi: bidi-override;
+            direction: ltr;
+        }
+        h4 {
+            &[lang=ru] {
+                display: block;
+            }
+            &[lang=de],
+            &[lang=en],
+            &[lang=ar] {
+                display: none;
+            }
+        }
+    }
+}
+@include mediaSingle(1401px) {
+    header {
+        @include wdautomargin(1400px);
+        h1 {
+            width: 100%;
+            color: $dark-brown;
+            span {
+                display: inline;
+                float: none;
+                letter-spacing: 0.25rem;
+                font-size: 3.998rem;
+                text-align: left;
+            }
+            i.fa-lg {
+                @include wdfloat(inherit, inline, none);
+                @include fslheight(4rem, 4rem*1.6);
+                @include icon($dark-brown, baseline);
+            }
+        }
+    }
+    nav {
+        @include nav(static, 100%, 0);
+        li {
+            width: 20%;
+            float: left;
+            &:first-child a {
+                border-left: none;
+            }
+        }
+        a {
+            @include fslheight(1.414rem, 2rem);
+            min-height: 2rem;
+            border: none;
+            border-left: 1px solid $grey;
+            @include marginpadding(1rem 0, 0 1rem);
+        }
+    }
+    section.focal,
+    section.content1,
+    section.content2,
+    footer {
+        @include wdautomargin(1400px);
+    }
+    section.focal {
+        h2 {
+            @include wdautomargin(600px);
+            font-size: 3.998rem;
+        }
+        p.author {
+            @include wdautomargin(600px);
+        }
+    }
+    .col-3 {
+        @include equalSpaced(3, 3);
+        margin-left: 3%;
+    }
+    .col-4 {
+        @include equalSpaced(4, 3);
+        margin-left: 3%;
+    }
+    section.content1 {
+        h3 {
+            font-size: 2.827rem;
+            font-weight: 100;
+            .fa-2x {
+                font-size: 2.827rem;
+                padding-right: 1rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    section.content2 {
+        font-size: 1.999rem;
+        p {
+            font-size: 1.414rem;
+            font-weight: 400;
+        }
+        li {
+            font-size: 1.999rem;
+        }
+    }
+    footer {
+        p {
+            font-size: 1.414rem;
+            letter-spacing: 0.2rem;
+        }
+        p:last-child {
+            color: $grey;
+        }
+        .fa-circle {
+            color: $med-blue;
+        }
+        h4[lang=en] {
+            display: block;
+        }
+        h4[lang=de],
+        h4[lang=ar],
+        h4[lang=ru] {
+            display: none;
+        }
+    }
+}

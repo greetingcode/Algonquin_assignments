@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Video</title>
+    <meta name="description" content="video">
+    <meta name="keywords" content="html5 video tag">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+<!--wrapper starts-->
+
+    <!--video section-->
+        <div class="background-container video-overlay">
+            <div class="video-container">
+            <video autoplay muted loop poster="media/3.jpg" class = "not-loaded">
+                <!-- video resources -->
+                <source src="media/korean_snack.webm">
+                <source src="media/korean_snack.mp4">
+                <source src="media/korean_snack.ogv">
+            </video>
+            </div>
+
+            <div class="overlay">
+                <p id="text_loading" class="text_loading"> video loading </p>
+                <p>Gangjung</p>
+            </div>
+        </div>
+    <!--video section-->
+
+
+    <!--overlay transparent box-->
+        <div class="box">
+        </div>
+    <!--overlay transparent box-->
+
+    <!--columns-->
+        <div class="cols">
+            <h1>
+                Gangjeong (강정, 强情)
+            </h1>
+            <div class="col-container">
+                <div class="col">
+                    a Korean traditional confectionery (hangwa) popular with women as a low calorie snack. A mixture of glutinous rice, honey and malt is boiled then a puffed cereal is mixed in. The mixture is scraped out onto a wooden board with sides and rolled flat with a rolling pin. It is cut into various sizes. Other ingredients such as roasted peanut halves, pine nuts, raisins or sesame seeds may be added; one variety has black sesame seed instead of puffed cereal. It is a tasty, not too sweet snack. Gangjeong is often served during important events such as weddings, ancestral rites, and lunar new year days (Seollal)
+                </div>
+            </div>
+        </div>
+    <!--columns-->
+    </div>
+<!--wrapper ends-->
+
+    <script>
+        function init(){var e=document.querySelector("video"),t=document.querySelector("#text_loading");e.onloadeddata=function(){e.classList.remove("not-loaded"),e.classList.add("loaded"),t.classList.remove("text_loading"),t.classList.add("text_loaded")}}document.addEventListener("DOMContentLoaded",init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+@import "partials/variables";
+@import "partials/mixins";
+* {
+    @include marginpadding(0, 0);
+    @include box-sizing(border-box);
+    &:after,
+    &:before {
+        @include box-sizing(inherit);
+    }
+}
+
+html {
+    @include fslheight(1rem, 1.6);
+    font-family: $dfont-family;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $hfont-family;
+}
+
+ul {
+    list-style: none;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+//------------------------------------
+.bg-header {
+    @include colors($light-blue, $dark-grey);
+    border-bottom: 1rem solid $med-blue;
+    border-top: 1rem solid $dark-blue;
+    position: relative;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        width: 30%;
+        height: 1rem;
+        background-color: $dark-blue;
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+}
+
+header {
+    @include automargin;
+    width: 400px;
+    position: relative;
+    h1 {
+        //width: 100%;
+        padding: 0 2rem;
+        color: $dark-brown;
+        letter-spacing: 0.1rem;
+        span {
+            @include wdfloat(75%, inherit, right);
+            font-size: 3.998rem;
+            padding-left: 1rem;
+            text-align: right;
+        }
+        .fa-lg {
+            @include wdfloat(25%, block, left);
+            @include fslheight(7rem, 7rem*1.6);
+            color: $light-brown;
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    padding: 2rem 0;
+    clear: both;
+    ul {}
+    li {
+        float: none;
+        background-color: $white;
+    }
+    a {
+        @include fslheight(1.414rem, 1);
+        display: block;
+        color: $dark-grey;
+        text-align: center;
+        letter-spacing: 0.25rem;
+        text-decoration: none;
+        border: 1px solid $grey;
+        border-bottom: none;
+        padding: 1rem 2rem;
+        &:hover {
+            font-weight: 700;
+            color: $dark-brown;
+        }
+    }
+}
+
+//------------------------------------
+.bg-focal {
+    @include colors($light-brown, $dark-brown);
+}
+
+.focal {
+    @include wdautomargin(400px);
+    h2 {
+        @include fslheight(1.999rem, 1.2);
+        padding: 2rem 2rem 1rem 2rem;
+    }
+    .author {
+        font-size: 1rem;
+        padding: 0.2rem 2rem 2rem;
+    }
+}
+
+.content1 {
+    padding: 2rem 0;
+    color: $dark-grey;
+    h3 {
+        font-size: 1.999rem;
+        padding: 0.2rem 2rem 2rem;
+    }
+    i {
+        vertical-align: middle;
+        padding-right: 2rem;
+    }
+    p {
+        font-size: 1.414rem;
+        padding: 0.5rem 2rem 2rem;
+    }
+}
+
+.bg-content2 {
+    @include colors($light-blue, $dark-blue);
+}
+
+.content2 {
+    padding: 2rem 0;
+    h3 {
+        @include fontpadding(1.999rem, 1rem 2rem 0.5rem);
+    }
+    h4 {
+        @include fontpadding(1.999rem, 1rem 2rem 0rem);
+    }
+    p {
+        @include fontpadding(1.414rem, 0.5rem 2rem 1rem);
+    }
+    li {
+        @include fontpadding(1.414rem, 0.5rem 2rem);
+    }
+}
+
+.row {
+    clear: both;
+}
+
+.bg-footer {
+    padding-bottom: 2rem;
+}
+
+.col-2 {
+    @include equalSpaced(2, 0);
+    @extend .bg-footer;
+    border-left: 1px solid #3a5E63;
+    margin-bottom: 2rem;
+    @include automargin;
+}
+
+footer {
+    padding: 2rem 0;
+    h4 {
+        @include fontpadding(1.414rem, 0.5rem 2rem);
+        color: $dark-brown;
+    }
+    h4[lang=de] {
+        display: block;
+    }
+    h4[lang=en],
+    h4[lang=ar],
+    h4[lang=ru] {
+        display: none;
+    }
+    p {
+        @include fontpadding(1rem, 0.5rem 2rem);
+    }
+    .fa-circle {
+        color: $dark-grey;
+    }
+    .col-2:first-child {
+        border-left: none;
+    }
+}
+
+@import "partials/queries";
